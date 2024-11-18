@@ -9,6 +9,5 @@ app.use(express.json());
 dotenv.config()
 app.use(currencyRoutes);
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-module.exports = app;
+const PORT : number =  parseInt(process.env.PORT || "5000");
+app.listen(PORT,'0.0.0.0', () => console.log(`Server running on port ${PORT}`));
